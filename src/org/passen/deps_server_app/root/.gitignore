@@ -1,0 +1,7 @@
+*.jar
+.cpcache/
+.history/
+.nrepl-port
+junit.xml
+trace.edn
+reports/

@@ -1,0 +1,20 @@
+default:
+	@just --list
+
+run:
+	@clojure -M:main
+
+lint:
+	@clj-kondo --lint src dev test
+
+build:
+	@clojure -M:uberjar
+
+repl:
+	@clj -M:dev:test
+
+test:
+	@clojure -M:test:runner
+
+autotest:
+	@clojure -M:test:watcher

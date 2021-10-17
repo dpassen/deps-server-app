@@ -1,0 +1,4 @@
+{:description "A server application"
+ :transform
+ [["src" "src/{{top/file}}/{{main/file}}" {}]
+  ["test" "test/{{top/file}}/{{main/file}}" {}]]}

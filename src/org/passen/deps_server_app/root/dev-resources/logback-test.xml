@@ -1,0 +1,13 @@
+<configuration scan="true" scanPeriod="5 seconds">
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <file>/tmp/{{artifact/id}}/{{artifact/id}}.log</file>
+    <append>true</append>
+    <immediateFlush>true</immediateFlush>
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+    </encoder>
+  </appender>
+  <root level="INFO">
+    <appender-ref ref="FILE" />
+  </root>
+</configuration>

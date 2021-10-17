@@ -1,0 +1,3 @@
+{:linters
+ {:unused-private-var
+  {:exclude [user/go*]}}}
