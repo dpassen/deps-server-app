@@ -5,26 +5,29 @@
    [{{raw-name/ns}}.env :as env]
    [integrant.core :as integrant]))
 
-(def system (volatile! nil))
+(def system nil)
 
 (defn init
   []
   (set-refresh-dirs "dev" "src" "test")
   (env/init!)
-  (vreset! system (integrant/read-string (slurp (io/resource "system.edn")))))
+  (alter-var-root
+   #'system
+   (fn [_system]
+     (integrant/read-string (slurp (io/resource "system.edn"))))))
 
 (defn start
   []
-  (integrant/load-namespaces @system)
-  (vswap! system integrant/init))
+  (integrant/load-namespaces system)
+  (alter-var-root #'system integrant/init))
 
 (defn stop
   []
-  (vswap! system (fn [system] (when system (integrant/halt! system)))))
-
-(defn reset
-  []
-  (vreset! system nil))
+  (alter-var-root
+   #'system
+   (fn [system]
+     (when system
+       (integrant/halt! system)))))
 
 (defn- go*
   []
@@ -39,5 +42,4 @@
 (comment
   (go)
   (stop)
-  (reset)
   ,)
