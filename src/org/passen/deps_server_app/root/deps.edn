@@ -9,7 +9,7 @@
   metosin/jsonista               {:mvn/version "0.3.5"}
   metosin/muuntaja               {:mvn/version "0.6.8"}
   metosin/ring-http-response     {:mvn/version "0.9.3"}
-  org.clojure/tools.logging      {:mvn/version "1.1.0"}
+  org.clojure/tools.logging      {:mvn/version "1.2.1"}
   org.slf4j/jcl-over-slf4j       {:mvn/version "1.7.32"}
   org.slf4j/jul-to-slf4j         {:mvn/version "1.7.32"}
   org.slf4j/log4j-over-slf4j     {:mvn/version "1.7.32"}
@@ -36,4 +36,4 @@
   :dev
   {:extra-paths ["dev" "dev-resources"]
    :extra-deps
-   {org.clojure/tools.namespace {:mvn/version "1.1.1"}}}}}
+   {org.clojure/tools.namespace {:mvn/version "1.2.0"}}}}}
