@@ -18,7 +18,8 @@
   ring/ring                      {:mvn/version "1.9.4"}}
  :aliases
  {:main
-  {:main-opts ["-m" "{{raw-name/ns}}.app"]}
+  {:main-opts ["-m" "{{raw-name/ns}}.app"]
+   :jvm-opts  ["-Dclojure.tools.logging.factory=clojure.tools.logging.impl/slf4j-factory"]}
   :uberjar
   {:replace-deps
    {uberdeps/uberdeps {:mvn/version "1.1.1"}}
