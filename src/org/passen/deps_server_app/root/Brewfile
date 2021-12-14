@@ -1,4 +1,3 @@
-tap "adoptopenjdk/openjdk"
 tap "borkdude/brew"
 tap "clojure/tools"
 tap "homebrew/bundle"
@@ -11,4 +10,4 @@ brew "just"
 brew "borkdude/brew/clj-kondo"
 brew "clojure/tools/clojure"
 
-cask "adoptopenjdk11"
+cask "temurin11"
