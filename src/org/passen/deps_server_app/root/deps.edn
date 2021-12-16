@@ -9,7 +9,7 @@
   metosin/jsonista               {:mvn/version "0.3.5"}
   metosin/muuntaja               {:mvn/version "0.6.8"}
   metosin/ring-http-response     {:mvn/version "0.9.3"}
-  org.clojure/tools.logging      {:mvn/version "1.2.1"}
+  org.clojure/tools.logging      {:mvn/version "1.2.2"}
   org.slf4j/jcl-over-slf4j       {:mvn/version "1.7.32"}
   org.slf4j/jul-to-slf4j         {:mvn/version "1.7.32"}
   org.slf4j/log4j-over-slf4j     {:mvn/version "1.7.32"}
@@ -28,7 +28,7 @@
   :test
   {:extra-paths ["test"]
    :extra-deps
-   {lambdaisland/kaocha {:mvn/version "1.60.945"}
+   {lambdaisland/kaocha {:mvn/version "1.60.972"}
     tortue/spy          {:mvn/version "2.9.0"}}}
   :runner
   {:main-opts ["-m" "kaocha.runner"]}
