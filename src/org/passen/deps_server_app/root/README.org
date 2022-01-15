@@ -5,31 +5,31 @@
 *** Development
 Run the app:
 #+BEGIN_SRC sh
-$ just run
+  just run
 #+END_SRC
 Start an nREPL and connect via your editor:
 #+BEGIN_SRC sh
-$ just repl
-user=> (go)
+  just repl
+  user=> (go)
 #+END_SRC
 The server will start on port 8080 by default. You can verify this by hitting the [[http://localhost:8080/info][info]] endpoint.
 *** Tests
 **** Runner
 Runs the tests once
 #+BEGIN_SRC sh
-$ just test
+  just test
 #+END_SRC
 **** Watcher
 Watches for file changes and continually runs tests
 #+BEGIN_SRC sh
-$ just autotest
+  just autotest
 #+END_SRC
 *** Linting
 To lint the project:
 #+BEGIN_SRC sh
-$ just lint
+  just lint
 #+END_SRC
 *** Build an Uberjar
 #+BEGIN_SRC sh
-$ just build
+  just build
 #+END_SRC
