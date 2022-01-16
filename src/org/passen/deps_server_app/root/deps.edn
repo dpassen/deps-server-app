@@ -15,7 +15,7 @@
   org.slf4j/log4j-over-slf4j     {:mvn/version "1.7.33"}
   org.slf4j/osgi-over-slf4j      {:mvn/version "1.7.33"}
   org.slf4j/slf4j-api            {:mvn/version "1.7.33"}
-  ring/ring                      {:mvn/version "1.9.4"}}
+  ring/ring                      {:mvn/version "1.9.5"}}
  :aliases
  {:main
   {:main-opts ["-m" "{{raw-name/ns}}.app"]
