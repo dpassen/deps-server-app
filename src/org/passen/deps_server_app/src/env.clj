@@ -8,12 +8,14 @@
 (def lookup omniconf/get)
 
 (def ^:private omniconf-config
-  {:env-key         {:description "environment key"
-                     :type        :keyword
-                     :required    true}
-   :scm-rev         {:description "scm rev"
-                     :type        :keyword
-                     :required    true}})
+  {:env-key
+   {:description "environment key"
+    :type        :keyword
+    :required    true}
+   :scm-rev
+   {:description "scm rev"
+    :type        :keyword
+    :required    true}})
 
 (defn init!
   []
