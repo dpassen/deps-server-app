@@ -4,6 +4,9 @@ default:
 run:
 	@clojure -M:main
 
+clean:
+	@-rm -rf {{artifact/id}}.jar
+
 lint:
 	@clj-kondo --lint src dev test
 
