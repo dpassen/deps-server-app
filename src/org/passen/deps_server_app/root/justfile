@@ -1,3 +1,5 @@
+jarfile := "{{artifact/id}}.jar"
+
 default:
 	@just --list
 
@@ -5,13 +7,13 @@ run:
 	@clojure -M:main
 
 clean:
-	@-rm -rf {{artifact/id}}.jar
+	@-rm -rf {{jarfile}}
 
 lint:
 	@clj-kondo --lint src dev test
 
 build:
-	@clojure -M:uberjar
+	@clojure -M:uberjar --target {{jarfile}}
 
 repl:
 	@clj -M:dev:test
@@ -23,4 +25,4 @@ autotest:
 	@clojure -M:test:watcher
 
 run-jar: build
-	@java -cp {{artifact/id}}.jar clojure.main -m {{raw-name/ns}}.app
+	@java -cp {{jarfile}} clojure.main -m {{raw-name/ns}}.app

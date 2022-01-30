@@ -25,7 +25,7 @@
   {:replace-deps
    {uberdeps/uberdeps {:mvn/version "1.1.2"}}
    :replace-paths []
-   :main-opts     ["-m" "uberdeps.uberjar" "--target" "{{artifact/id}}.jar" "--main-class" "clojure.main"]}
+   :main-opts     ["-m" "uberdeps.uberjar" "--main-class" "clojure.main"]}
   :test
   {:extra-paths ["test"]
    :extra-deps
