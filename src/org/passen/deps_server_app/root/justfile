@@ -21,7 +21,7 @@ repl:
 test:
 	@clojure -M:test:runner
 
-autotest:
+watch-test:
 	@clojure -M:test:watcher
 
 run-jar: build
