@@ -2,8 +2,8 @@
  :deps
  {org.clojure/clojure            {:mvn/version "1.10.3"}
   bidi/bidi                      {:mvn/version "2.1.6"}
-  ch.qos.logback/logback-classic {:mvn/version "1.2.10"}
-  ch.qos.logback/logback-core    {:mvn/version "1.2.10"}
+  ch.qos.logback/logback-classic {:mvn/version "1.2.11"}
+  ch.qos.logback/logback-core    {:mvn/version "1.2.11"}
   com.grammarly/omniconf         {:mvn/version "0.4.3"}
   integrant/integrant            {:mvn/version "0.8.0"}
   metosin/jsonista               {:mvn/version "0.3.5"}
