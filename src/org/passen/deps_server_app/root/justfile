@@ -1,28 +1,28 @@
 jarfile := "{{artifact/id}}.jar"
 
 default:
-	@just --list
+    @just --list
 
 run:
-	@clojure -M:main
+    @clojure -M:main
 
 clean:
-	@-rm -rf {{jarfile}}
+    @-rm -rf {{ jarfile }}
 
 lint:
-	@clj-kondo --lint src dev test
+    @clj-kondo --lint src dev test
 
 build:
-	@clojure -M:uberjar --target {{jarfile}}
+    @clojure -M:uberjar --target {{ jarfile }}
 
 repl:
-	@clj -M:dev:test
+    @clj -M:dev:test
 
 test:
-	@clojure -M:test:runner
+    @clojure -M:test:runner
 
 watch-test:
-	@clojure -M:test:watcher
+    @clojure -M:test:watcher
 
 run-jar: build
-	@java -cp {{jarfile}} clojure.main -m {{raw-name/ns}}.app
+    @java -cp {{ jarfile }} clojure.main -m {{raw-name/ns}}.app
