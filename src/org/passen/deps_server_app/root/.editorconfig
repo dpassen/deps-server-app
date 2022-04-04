@@ -15,4 +15,4 @@ indent_style = space
 trim_trailing_whitespace = false
 
 [justfile]
-indent_style = tab
+indent_style = space
