@@ -29,7 +29,7 @@
   :test
   {:extra-paths ["test"]
    :extra-deps
-   {lambdaisland/kaocha {:mvn/version "1.65.1029"}
+   {lambdaisland/kaocha {:mvn/version "1.66.1034"}
     tortue/spy          {:mvn/version "2.13.0"}}}
   :runner
   {:main-opts ["-m" "kaocha.runner"]}
