@@ -14,7 +14,7 @@
     :required    true}
    :scm-rev
    {:description "scm rev"
-    :type        :keyword
+    :type        :string
     :required    true}})
 
 (defn init!

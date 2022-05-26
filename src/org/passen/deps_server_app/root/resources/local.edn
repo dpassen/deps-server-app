@@ -1,2 +1,2 @@
 {:env-key :local
- :scm-rev :dev}
+ :scm-rev "dev"}
