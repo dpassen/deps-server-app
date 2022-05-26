@@ -4,12 +4,12 @@
   bidi/bidi                      {:mvn/version "2.1.6"}
   ch.qos.logback/logback-classic {:mvn/version "1.2.11"}
   ch.qos.logback/logback-core    {:mvn/version "1.2.11"}
-  com.grammarly/omniconf         {:mvn/version "0.4.3"}
   integrant/integrant            {:mvn/version "0.8.0"}
   metosin/jsonista               {:mvn/version "0.3.5"}
   metosin/muuntaja               {:mvn/version "0.6.8"}
   metosin/ring-http-response     {:mvn/version "0.9.3"}
   org.clojure/tools.logging      {:mvn/version "1.2.4"}
+  org.passen/malapropism         {:mvn/version "0.1.24"}
   org.slf4j/jcl-over-slf4j       {:mvn/version "1.7.36"}
   org.slf4j/jul-to-slf4j         {:mvn/version "1.7.36"}
   org.slf4j/log4j-over-slf4j     {:mvn/version "1.7.36"}

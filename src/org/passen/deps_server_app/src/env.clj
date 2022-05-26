@@ -2,25 +2,27 @@
   "Human language predicates for config and env vars."
   (:require
    [clojure.java.io :as io]
-   [clojure.tools.logging :as log]
-   [omniconf.core :as omniconf]))
+   [org.passen.malapropism.core :as malapropism]))
 
-(def lookup omniconf/get)
+(def ^:private config-schema
+  [:map
+   [:env-key
+    {:title "environment key"}
+    :keyword]
+   [:scm-rev
+    {:title "scm rev"}
+    :string]])
 
-(def ^:private omniconf-config
-  {:env-key
-   {:description "environment key"
-    :type        :keyword
-    :required    true}
-   :scm-rev
-   {:description "scm rev"
-    :type        :string
-    :required    true}})
+(defonce ^:private config (atom {}))
+
+(defn lookup
+  [& ks]
+  (get-in @config ks))
 
 (defn init!
   []
-  (omniconf/set-logging-fn (fn [& args] (apply #(log/info %) args)))
-  (omniconf/define omniconf-config)
-  (omniconf/populate-from-file (io/resource "local.edn"))
-  (omniconf/populate-from-env)
-  (omniconf/verify :silent true))
+  (reset! config (-> (malapropism/with-schema config-schema)
+                     (malapropism/with-values-from-file
+                       (io/resource "local.edn"))
+                     (malapropism/with-values-from-env)
+                     (malapropism/verify!))))
