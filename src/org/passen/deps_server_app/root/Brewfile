@@ -6,6 +6,7 @@ tap "homebrew/core"
 
 brew "editorconfig"
 brew "just"
+brew "ripgrep"
 
 brew "borkdude/brew/clj-kondo"
 brew "clojure/tools/clojure"

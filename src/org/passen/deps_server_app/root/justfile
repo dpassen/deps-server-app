@@ -10,7 +10,7 @@ clean:
     @-rm -rf {{ jarfile }}
 
 lint:
-    @clj-kondo --parallel --lint src dev test resources deps.edn tests.edn
+    @rg -tclojure -tedn --files | xargs clj-kondo --parallel --lint
 
 build:
     @clojure -M:uberjar --target {{ jarfile }}
