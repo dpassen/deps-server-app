@@ -25,4 +25,4 @@ watch-test:
     @clojure -M:test:watcher
 
 run-jar: build
-    @java -cp {{ jarfile }} clojure.main -m {{raw-name/ns}}.app
+    @java -jar {{ jarfile }} -m {{raw-name/ns}}.app
