@@ -5,5 +5,5 @@ A [[https://github.com/seancorfield/deps-new][deps-new]] template for generating
 1. Install [[https://github.com/seancorfield/deps-new#deps-new-][deps-new]]
 2. Create an app based on this template
    #+BEGIN_SRC sh
-     clj -Sdeps '{:deps {io.github.dpassen/deps-server-app {:git/tag "v0.2.0" :git/sha "2b80162"}}}' -Tnew :template org.passen/deps-server-app :name org/app-name
+     clj -Sdeps '{:deps {io.github.dpassen/deps-server-app {:git/tag "v0.3.0" :git/sha "4f20384"}}}' -Tnew :template org.passen/deps-server-app :name org/app-name
    #+END_SRC
