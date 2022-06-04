@@ -1,5 +1,3 @@
-jarfile := "{{artifact/id}}.jar"
-
 default:
     @just --list
 
@@ -7,13 +5,13 @@ run:
     @clojure -M:main
 
 clean:
-    @-rm -rf {{ jarfile }}
+    @-rm -rf target
 
 lint:
     @rg -tclojure -tedn --files | xargs clj-kondo --parallel --lint
 
 build:
-    @clojure -M:uberjar --target {{ jarfile }}
+    @clojure -T:build uberjar
 
 repl:
     @clj -M:dev:test
@@ -23,6 +21,3 @@ test:
 
 watch-test:
     @clojure -M:test:watcher
-
-run-jar: build
-    @java -jar {{ jarfile }} -m {{raw-name/ns}}.app

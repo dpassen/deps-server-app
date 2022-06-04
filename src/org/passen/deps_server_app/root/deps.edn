@@ -21,11 +21,12 @@
  {:main
   {:main-opts ["-m" "{{raw-name/ns}}.app"]
    :jvm-opts  ["-Dclojure.tools.logging.factory=clojure.tools.logging.impl/slf4j-factory"]}
-  :uberjar
-  {:replace-deps
-   {uberdeps/uberdeps {:mvn/version "1.1.4"}}
-   :replace-paths []
-   :main-opts     ["-m" "uberdeps.uberjar" "--main-class" "clojure.main"]}
+  :build
+  {:deps
+   {io.github.liquidz/build.edn
+    {:git/tag "0.3.90"
+     :git/sha "e3a3e31"}}
+   :ns-default build-edn.main}
   :test
   {:extra-paths ["test"]
    :extra-deps

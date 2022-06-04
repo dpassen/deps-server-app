@@ -3,7 +3,8 @@
    [clojure.java.io :as io]
    [clojure.tools.logging :as log]
    [{{raw-name/ns}}.env :as env]
-   [integrant.core :as integrant]))
+   [integrant.core :as integrant])
+  (:gen-class))
 
 (defn- set-uncaught-exception-handler!
   []
