@@ -17,7 +17,7 @@ repl:
     @clj -M:dev:test
 
 test:
-    @clojure -M:test:runner
+    @clojure -X:test
 
 watch-test:
-    @clojure -M:test:watcher
+    @clojure -X:test:watcher

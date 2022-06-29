@@ -31,11 +31,11 @@
   {:extra-paths ["test"]
    :extra-deps
    {lambdaisland/kaocha {:mvn/version "1.68.1059"}
-    tortue/spy          {:mvn/version "2.13.0"}}}
-  :runner
-  {:main-opts ["-m" "kaocha.runner"]}
+    tortue/spy          {:mvn/version "2.13.0"}}
+   :exec-fn     kaocha.runner/exec-fn}
   :watcher
-  {:main-opts ["-m" "kaocha.runner" "--watch"]}
+  {:exec-args
+   {:watch? true}}
   :dev
   {:extra-paths ["dev" "dev-resources"]
    :extra-deps
