@@ -24,8 +24,8 @@
   :build
   {:deps
    {io.github.liquidz/build.edn
-    {:git/tag "0.4.107"
-     :git/sha "cf69a2a"}}
+    {:git/tag "0.5.116"
+     :git/sha "f633fa3"}}
    :ns-default build-edn.main}
   :test
   {:extra-paths ["test"]
