@@ -5,7 +5,7 @@
     </encoder>
   </appender>
   <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-    <file>/tmp/foob/foob.log</file>
+    <file>/tmp/{{artifact/id}}/{{artifact/id}}.log</file>
     <append>true</append>
     <immediateFlush>true</immediateFlush>
     <encoder>
