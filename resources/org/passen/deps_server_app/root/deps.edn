@@ -9,7 +9,7 @@
   metosin/muuntaja               {:mvn/version "0.6.8"}
   metosin/ring-http-response     {:mvn/version "0.9.3"}
   org.clojure/tools.logging      {:mvn/version "1.2.4"}
-  org.passen/malapropism         {:mvn/version "0.2.56"}
+  org.passen/malapropism         {:mvn/version "0.3.93"}
   org.slf4j/jcl-over-slf4j       {:mvn/version "2.0.3"}
   org.slf4j/jul-to-slf4j         {:mvn/version "2.0.3"}
   org.slf4j/log4j-over-slf4j     {:mvn/version "2.0.3"}
