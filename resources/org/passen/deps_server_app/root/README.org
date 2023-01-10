@@ -5,11 +5,11 @@
 *** Development
 Run the app:
 #+BEGIN_SRC sh
-  just run
+  task run
 #+END_SRC
 Start an nREPL and connect via your editor:
 #+BEGIN_SRC sh
-  just repl
+  task repl
   user=> (go)
 #+END_SRC
 The server will start on port 8080 by default. You can verify this by hitting the [[http://localhost:8080/info][info]] endpoint.
@@ -17,19 +17,19 @@ The server will start on port 8080 by default. You can verify this by hitting th
 **** Runner
 Runs the tests once
 #+BEGIN_SRC sh
-  just test
+  task test
 #+END_SRC
 **** Watcher
 Watches for file changes and continually runs tests
 #+BEGIN_SRC sh
-  just autotest
+  task watch-test
 #+END_SRC
 *** Linting
 To lint the project:
 #+BEGIN_SRC sh
-  just lint
+  task lint
 #+END_SRC
 *** Build an Uberjar
 #+BEGIN_SRC sh
-  just build
+  task build
 #+END_SRC

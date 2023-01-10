@@ -1,0 +1,44 @@
+version: "3"
+
+silent: true
+
+tasks:
+  default:
+    desc: List all tasks
+    cmds:
+      - task --list-all
+
+  run:
+    desc: Run the webapp
+    cmds:
+      - clojure -M:main
+
+  clean:
+    desc: Remove generated code
+    cmds:
+      - rm -rf target
+
+  lint:
+    desc: Lint code using clj-kondo
+    cmds:
+      - rg -tclojure -tedn --files | xargs clj-kondo --parallel --lint
+
+  build:
+    desc: Build production uberjar
+    cmds:
+      - clojure -T:build uberjar
+
+  repl:
+    desc: Run a project REPL
+    cmds:
+      - clj -M:dev:test
+
+  test:
+    desc: Run unit tests
+    cmds:
+      - clojure -X:test
+
+  watch-test:
+    desc: Watch source code and run tests accordingly
+    cmds:
+      - clojure -X:test:watcher

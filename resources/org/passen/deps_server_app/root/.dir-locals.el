@@ -1,5 +1,5 @@
 ((nil
-  (compile-command . "just build"))
+  (compile-command . "task build"))
  (clojure-mode
   (cider-clojure-cli-aliases . ":dev:test")
   (cider-ns-refresh-before-fn . "user/stop")
