@@ -38,7 +38,7 @@ tasks:
     cmds:
       - clojure -X:test
 
-  watch-test:
+  test:watch:
     desc: Watch source code and run tests accordingly
     cmds:
       - clojure -X:test:watcher
