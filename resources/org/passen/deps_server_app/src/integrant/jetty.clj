@@ -2,7 +2,7 @@
   (:require
    [{{raw-name/ns}}.web :as web]
    [integrant.core :as integrant]
-   [ring.adapter.jetty :as ring-jetty])
+   [ring.adapter.jetty9 :as ring-jetty])
   (:import
    (org.eclipse.jetty.server Server)))
 
