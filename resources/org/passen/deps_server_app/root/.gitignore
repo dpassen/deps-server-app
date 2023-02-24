@@ -5,3 +5,4 @@
 junit.xml
 trace.edn
 reports/
+.cache/
