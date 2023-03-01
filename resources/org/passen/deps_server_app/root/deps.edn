@@ -31,7 +31,7 @@
   :test
   {:extra-paths ["test"]
    :extra-deps
-   {lambdaisland/kaocha {:mvn/version "1.79.1270"}}
+   {lambdaisland/kaocha {:mvn/version "1.80.1274"}}
    :exec-fn     kaocha.runner/exec-fn}
   :watcher
   {:exec-args
