@@ -2,14 +2,12 @@
   (:require
    [{{raw-name/ns}}.web :as web]
    [integrant.core :as integrant]
-   [ring.adapter.jetty9 :as ring-jetty])
-  (:import
-   (org.eclipse.jetty.server Server)))
+   [ring.adapter.jetty9 :as ring-jetty]))
 
 (defmethod integrant/init-key :{{raw-name/ns}}.integrant/jetty
   [_ opts]
   (ring-jetty/run-jetty web/app opts))
 
 (defmethod integrant/halt-key! :{{raw-name/ns}}.integrant/jetty
-  [_ ^Server server]
-  (.stop server))
+  [_ jetty-adapter]
+  (ring-jetty/stop-server jetty-adapter))
