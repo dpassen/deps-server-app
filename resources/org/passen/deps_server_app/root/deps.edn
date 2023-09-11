@@ -4,7 +4,7 @@
   bidi/bidi                      {:mvn/version "2.1.6"}
   ch.qos.logback/logback-classic {:mvn/version "1.3.11"}
   ch.qos.logback/logback-core    {:mvn/version "1.3.11"}
-  info.sunng/ring-jetty9-adapter {:mvn/version "0.22.1"}
+  info.sunng/ring-jetty9-adapter {:mvn/version "0.30.0"}
   integrant/integrant            {:mvn/version "0.8.1"}
   metosin/jsonista               {:mvn/version "0.3.7"}
   metosin/muuntaja               {:mvn/version "0.6.8"}
