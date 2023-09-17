@@ -33,3 +33,6 @@ To lint the project:
 #+BEGIN_SRC sh
   task build
 #+END_SRC
+** Routes
+*** info                                                               :verb:
+get http://localhost:8080/info
