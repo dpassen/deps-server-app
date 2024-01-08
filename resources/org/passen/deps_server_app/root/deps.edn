@@ -11,11 +11,11 @@
   metosin/ring-http-response     {:mvn/version "0.9.3"}
   org.clojure/tools.logging      {:mvn/version "1.2.4"}
   org.passen/malapropism         {:mvn/version "0.4.104"}
-  org.slf4j/jcl-over-slf4j       {:mvn/version "2.0.10"}
-  org.slf4j/jul-to-slf4j         {:mvn/version "2.0.10"}
-  org.slf4j/log4j-over-slf4j     {:mvn/version "2.0.10"}
-  org.slf4j/osgi-over-slf4j      {:mvn/version "2.0.10"}
-  org.slf4j/slf4j-api            {:mvn/version "2.0.10"}
+  org.slf4j/jcl-over-slf4j       {:mvn/version "2.0.11"}
+  org.slf4j/jul-to-slf4j         {:mvn/version "2.0.11"}
+  org.slf4j/log4j-over-slf4j     {:mvn/version "2.0.11"}
+  org.slf4j/osgi-over-slf4j      {:mvn/version "2.0.11"}
+  org.slf4j/slf4j-api            {:mvn/version "2.0.11"}
   ring-logger/ring-logger        {:mvn/version "1.1.1"}
   ring/ring                      {:mvn/version "1.11.0"}}
  :aliases
