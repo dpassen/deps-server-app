@@ -1,9 +1,7 @@
 (ns {{raw-name/ns}}.app
   (:require
-   [clojure.java.io :as io]
    [clojure.tools.logging :as log]
-   [{{raw-name/ns}}.env :as env]
-   [integrant.core :as integrant])
+   [{{raw-name/ns}}.states :as states])
   (:gen-class))
 
 (defn- set-uncaught-exception-handler!
@@ -16,9 +14,6 @@
 (defn -main
   [& _args]
   (set-uncaught-exception-handler!)
-  (env/init!)
   (log/info "Starting app")
-  (let [system (integrant/read-string (slurp (io/resource "system.edn")))]
-    (integrant/load-namespaces system)
-    (integrant/init system))
+  (states/start)
   (log/info "App started"))

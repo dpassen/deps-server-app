@@ -1,3 +1,7 @@
-{:linters
- {:unused-private-var
+{:lint-as
+ {redelay.core/defstate clojure.core/def}
+ :linters
+ {:unresolved-symbol
+  {:exclude [(redelay.core/defstate [this])]}
+  :unused-private-var
   {:exclude [user/go*]}}}

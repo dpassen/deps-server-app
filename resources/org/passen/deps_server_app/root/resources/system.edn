@@ -1,3 +1,0 @@
-{:{{raw-name/ns}}.integrant/jetty
- {:port  8080
-  :join? false}}

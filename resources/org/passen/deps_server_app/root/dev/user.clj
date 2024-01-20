@@ -1,33 +1,20 @@
 (ns user
   (:require
-   [clojure.java.io :as io]
    [clojure.tools.namespace.repl :refer [refresh set-refresh-dirs]]
-   [{{raw-name/ns}}.env :as env]
-   [integrant.core :as integrant]))
-
-(def system nil)
+   [{{raw-name/ns}}.states :as states]
+   [redelay.core :as redelay]))
 
 (defn init
   []
-  (set-refresh-dirs "dev" "src" "test")
-  (env/init!)
-  (alter-var-root
-   #'system
-   (fn [_system]
-     (integrant/read-string (slurp (io/resource "system.edn"))))))
+  (set-refresh-dirs "dev" "src" "test"))
 
 (defn start
   []
-  (integrant/load-namespaces system)
-  (alter-var-root #'system integrant/init))
+  (states/start))
 
 (defn stop
   []
-  (alter-var-root
-   #'system
-   (fn [system]
-     (when system
-       (integrant/halt! system)))))
+  (redelay/stop))
 
 (defn- go*
   []
@@ -42,4 +29,5 @@
 (comment
   (go)
   (stop)
-  ,)
+  ;;
+  )
