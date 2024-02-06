@@ -27,7 +27,7 @@
   (refresh :after 'user/go*))
 
 (comment
-  (go)
-  (stop)
-  ;;
-  )
+  (go))
+
+(comment
+  (stop))
