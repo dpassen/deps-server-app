@@ -39,4 +39,4 @@
   :dev
   {:extra-paths ["dev" "dev-resources"]
    :extra-deps
-   {org.clojure/tools.namespace {:mvn/version "1.4.5"}}}}}
+   {org.clojure/tools.namespace {:mvn/version "1.5.0"}}}}}
