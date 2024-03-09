@@ -8,4 +8,6 @@
 
 (defn start
   []
-  (run! force states))
+  (doall
+   (for [state states]
+     (doto state force))))
