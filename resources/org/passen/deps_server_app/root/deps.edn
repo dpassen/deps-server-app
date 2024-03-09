@@ -1,6 +1,6 @@
 {:paths ["src" "resources"]
  :deps
- {org.clojure/clojure            {:mvn/version "1.11.1"}
+ {org.clojure/clojure            {:mvn/version "1.11.2"}
   bidi/bidi                      {:mvn/version "2.1.6"}
   ch.qos.logback/logback-classic {:mvn/version "1.5.3"}
   ch.qos.logback/logback-core    {:mvn/version "1.5.3"}
