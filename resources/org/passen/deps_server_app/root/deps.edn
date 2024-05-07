@@ -5,7 +5,7 @@
   ch.qos.logback/logback-classic {:mvn/version "1.5.6"}
   ch.qos.logback/logback-core    {:mvn/version "1.5.6"}
   functionalbytes/redelay        {:mvn/version "2.0.0"}
-  info.sunng/ring-jetty9-adapter {:mvn/version "0.33.0"}
+  info.sunng/ring-jetty9-adapter {:mvn/version "0.33.1"}
   metosin/jsonista               {:mvn/version "0.3.8"}
   metosin/muuntaja               {:mvn/version "0.6.10"}
   metosin/ring-http-response     {:mvn/version "0.9.3"}
@@ -31,7 +31,7 @@
   :test
   {:extra-paths ["test"]
    :extra-deps
-   {lambdaisland/kaocha {:mvn/version "1.88.1376"}}
+   {lambdaisland/kaocha {:mvn/version "1.89.1380"}}
    :exec-fn     kaocha.runner/exec-fn}
   :watcher
   {:exec-args
