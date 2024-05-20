@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# mise description="Remove generated code"
+
+set -o nounset
+set -o errexit
+set -o pipefail
+
+clean () {
+    rm -rf target
+}
+
+clean
