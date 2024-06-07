@@ -1,5 +1,5 @@
 ((nil
-  (compile-command . "task build"))
+  (compile-command . "mise run build"))
  (clojure-mode
   (cider-clojure-cli-aliases . ":dev:test")
   (cider-log-framework-name . "Logback")
