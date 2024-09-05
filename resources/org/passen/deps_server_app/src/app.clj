@@ -7,9 +7,8 @@
 (defn- set-uncaught-exception-handler!
   []
   (Thread/setDefaultUncaughtExceptionHandler
-   (reify Thread$UncaughtExceptionHandler
-     (uncaughtException [_this thread ex]
-       (log/fatal ex "Uncaught exception on" (.getName thread))))))
+   (fn [thread ex]
+     (log/fatal ex "Uncaught exception on" (Thread/.getName thread)))))
 
 (defn -main
   [& _args]
