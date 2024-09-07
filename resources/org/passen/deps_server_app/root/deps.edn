@@ -5,7 +5,7 @@
   ch.qos.logback/logback-classic {:mvn/version "1.5.7"}
   ch.qos.logback/logback-core    {:mvn/version "1.5.7"}
   functionalbytes/redelay        {:mvn/version "2.0.0"}
-  info.sunng/ring-jetty9-adapter {:mvn/version "0.33.4"}
+  info.sunng/ring-jetty9-adapter {:mvn/version "0.34.0"}
   metosin/jsonista               {:mvn/version "0.3.10"}
   metosin/muuntaja               {:mvn/version "0.6.10"}
   metosin/ring-http-response     {:mvn/version "0.9.4"}
