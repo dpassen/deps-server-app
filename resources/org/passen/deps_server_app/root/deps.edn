@@ -2,8 +2,8 @@
  :deps
  {org.clojure/clojure            {:mvn/version "1.12.0"}
   bidi/bidi                      {:mvn/version "2.1.6"}
-  ch.qos.logback/logback-classic {:mvn/version "1.5.11"}
-  ch.qos.logback/logback-core    {:mvn/version "1.5.11"}
+  ch.qos.logback/logback-classic {:mvn/version "1.5.12"}
+  ch.qos.logback/logback-core    {:mvn/version "1.5.12"}
   functionalbytes/redelay        {:mvn/version "2.0.0"}
   info.sunng/ring-jetty9-adapter {:mvn/version "0.35.1"}
   metosin/jsonista               {:mvn/version "0.3.11"}
