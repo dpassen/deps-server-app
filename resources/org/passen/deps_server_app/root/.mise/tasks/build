@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# mise description="Build production uberjar"
+#MISE description="Build production uberjar"
 
 set -o nounset
 set -o errexit

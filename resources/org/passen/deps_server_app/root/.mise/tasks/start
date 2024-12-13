@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# mise description="Start the webapp"
+#MISE description="Start the webapp"
 
 set -o nounset
 set -o errexit

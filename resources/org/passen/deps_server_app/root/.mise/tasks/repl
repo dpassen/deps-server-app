@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# mise description="Run a project REPL"
+#MISE description="Run a project REPL"
 
 set -o nounset
 set -o errexit

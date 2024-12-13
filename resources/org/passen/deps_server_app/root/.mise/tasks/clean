@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# mise description="Remove generated code"
+#MISE description="Remove generated code"
 
 set -o nounset
 set -o errexit
