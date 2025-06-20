@@ -5,7 +5,7 @@
 *** Development
 Run the app:
 #+BEGIN_SRC sh
-  mise run run
+  mise run start
 #+END_SRC
 Start an nREPL and connect via your editor:
 #+BEGIN_SRC sh
