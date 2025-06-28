@@ -9,5 +9,5 @@
 (def app
   (-> routes/routes
       (bidi.ring/make-handler handlers/route-handlers)
-      muuntaja.middleware/wrap-format
-      ring.logger/wrap-with-logger))
+      (muuntaja.middleware/wrap-format)
+      (ring.logger/wrap-with-logger)))
