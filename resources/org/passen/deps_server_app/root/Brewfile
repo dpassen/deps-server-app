@@ -1,12 +1,12 @@
-tap "borkdude/brew"
-tap "clojure/tools"
-tap "homebrew/bundle"
+tap 'borkdude/brew'
+tap 'clojure/tools'
 
-brew "editorconfig"
-brew "mise"
-brew "ripgrep"
+brew 'editorconfig'
+brew 'just'
+brew 'mise'
+brew 'ripgrep'
 
-brew "borkdude/brew/clj-kondo"
-brew "clojure/tools/clojure"
+brew 'borkdude/brew/clj-kondo'
+brew 'clojure/tools/clojure'
 
-cask "temurin@17"
+cask 'temurin@21'

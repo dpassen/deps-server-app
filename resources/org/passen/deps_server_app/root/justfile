@@ -1,0 +1,23 @@
+default:
+    @just --list
+
+run:
+    @clojure -M:main
+
+clean:
+    @-rm -rf target
+
+build:
+    @clojure -T:build uberjar
+
+lint:
+    @rg -tclojure -tedn --files | xargs clj-kondo --parallel --lint
+
+repl:
+    @clj -M:dev:test
+
+test:
+    @clojure -X:test
+
+watch-test:
+    @clojure -X:test:watcher
