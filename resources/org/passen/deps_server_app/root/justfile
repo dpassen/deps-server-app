@@ -1,23 +1,31 @@
+[private]
 default:
     @just --list
 
+# Run the webapp
 run:
     @clojure -M:main
 
+# Remove generated code
 clean:
     @-rm -rf target
 
+# Build production uberjar
 build:
     @clojure -T:build uberjar
 
+# Lint code using clj-kondo
 lint:
     @rg -tclojure -tedn --files | xargs clj-kondo --parallel --lint
 
+# Run a project REPL
 repl:
     @clj -M:dev:test
 
+# Run unit tests
 test:
     @clojure -X:test
 
+# Watch source code and run tests accordingly
 watch-test:
     @clojure -X:test:watcher
