@@ -3,29 +3,36 @@ commands:
     @just --list
 
 # Run the webapp
+[group('dev')]
 run:
     @clojure -M:main
 
 # Remove generated code
+[group('dev')]
 clean:
     @-rm -rf target
 
 # Build production uberjar
+[group('release')]
 build:
     @clojure -T:build uberjar
 
 # Lint code using clj-kondo
+[group('dev')]
 lint:
     @rg -tclojure -tedn --files | xargs clj-kondo --parallel --lint
 
 # Run a project REPL
+[group('dev')]
 repl:
     @clj -M:dev:test
 
 # Run unit tests
+[group('test')]
 test:
     @clojure -X:test
 
 # Watch source code and run tests accordingly
+[group('test')]
 watch-test:
     @clojure -X:test:watcher
